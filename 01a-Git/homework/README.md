@@ -129,7 +129,7 @@ Deberías ver algo parecido a estas líneas:
   Untracked files:
     (use "git add <file>..." to include in what will be committed)
 
-    archivo-ejemplo.js
+    archivo-ejemplo.jsg
 
   no changes added to commit (use "git add" and/or "git commit -a")
 ```

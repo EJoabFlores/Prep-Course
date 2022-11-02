@@ -9,7 +9,7 @@ const nuevoNum = 6;
 // Crea una variable booleana:
 const nuevoBool = true;
 
-// Resuelve el siguiente problema matemático:
+// Resuelve el siguiente problema matemáticas:
 const nuevaResta = 10 - 5 === 5;
 
 // Resuelve el siguiente problema matemático:
