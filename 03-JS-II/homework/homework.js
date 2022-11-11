@@ -5,12 +5,12 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if (x < y) {
+  if (x > y) {
     return x; 
   }
-    else if ( x, y){
-      return y;
-    }
+
+    return y;
+
 }
 
 function mayoriaDeEdad(edad) {
@@ -28,11 +28,11 @@ function conection(status) {
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if (status === 1) {
-    return "online";
+    return "Online";
 } else if (status === 2) {
-  return "away"
+  return "Away"
 } else {
-  return "offline"
+  return "Offline"
 }
 }
 
@@ -72,9 +72,9 @@ function colors(color) {
     case "green":
       return "This is green"
     case "orange":
-      return "tThis is orange"
-    default:
-      return "color not found"
+      return "This is orange"
+    default: 
+      return "Color not found"
   }
 }
 
@@ -119,7 +119,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (numero % 15 === 0) {
+  if (numero % 3 === 0 && numero % 5 === 0) {
     return "fizzbuzz"
   }
   if (numero % 3 === 0) {
@@ -206,12 +206,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var i = 1;
   do{
-    i= i+1
-    suma= suma+5
+    i += 1;
+    numero = numero + 5;
   }
-  while ( i < 8)
-  return suma
+  while ( i < 9 );{ 
+  return numero;
+}
 }
 
 
