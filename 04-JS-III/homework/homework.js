@@ -3,14 +3,14 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  return array [0];
+  return (array [0]);
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
-  // Tu código:
-  return array [array.lenght - 1];
+  // Tu código:  
+  return array [array.length - 1]
 }
 
 
@@ -27,8 +27,9 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  for (let index = 0; i < array.length; i++) {
-    array [i]= i + 1
+
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i] + 1
   };
   return array;
 }
@@ -106,13 +107,13 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  var numeroMasGrande= 0
+  var maximo= numeros [0];
   for(var i=0; i <numeros.length; i++){
-    if(numeros [i] > numeroMasGrande){
-      numeroMasGrande = numeros [i];
+    if(numeros [i] > maximo){
+      maximo = numeros [i];
     }
   }
-  return numeroMasGrande;
+  return maximo;
 }
 
 
@@ -120,30 +121,25 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  var acumulador = 1;
-  if(arguments.length === 0){
-    return 0;
-  } else if (arguments.length === 1){
-    return arguments [0];
-  }else{
-      for (var i=0; i <arguments.length; i ++){
-        arcumulador = acumulador*arguments[i]
-      }
-    }
-    return acumulador;
+ if (arguments.length < 1) return 0;
+ var multiplicados = 1;
+ for (var i=0;i<arguments.length;i++){
+  multiplicados = multiplicados * arguments [i];
+ }
+  return multiplicados;
   }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  var acumulador=0;
-  for (var i =0; i <arreglo.length; i ++){
+  var cont = 0;
+  for (var i=0; i <arreglo.length; i++){
     if (arreglo [i] > 18){
-      acumualdor = acumulador + 1
+      cont++;
     }
   }
-  return acumualdor;
+  return cont;
 
 }
 
@@ -154,9 +150,9 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
   if (numeroDeDia === 1 || numeroDeDia === 7){
-    return "Es fin de semana "
+    return "Es fin de semana"
   }else if (numeroDeDia > 1 && numeroDeDia < 7){
-    return "Es dia laboral"
+    return "Es dia Laboral"
   }
 } 
 
@@ -210,13 +206,14 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-  var nuevoArray = []; 
-  for(var i=0; i <array.lenght; i++){
-    if (array [i] > 100){
-    nuevoArray.push (array[i])
-     }
+  var nuevoArray = [];
+  for(var i = 0; i <array.length; i++){
+    if( array[i] > 100){
+      nuevoArray.push(array[i])
+    }
   }
-  return nuevoArray;
+return nuevoArray; 
+
 }
 
 
@@ -236,7 +233,7 @@ function breakStatement(numero) {
   array.push (suma);
   } 
     if (i < 10){
-      return "Se interrumpio la ejecución"
+      return "Se interrumpió la ejecución"
     }else{
       return array;
     }
